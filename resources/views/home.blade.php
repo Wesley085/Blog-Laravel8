@@ -1,13 +1,13 @@
 @extends('master')
 
-@section('header-intro')
+{{-- @section('header-intro')
 
 <h2>Buscar post</h2>
 <form action="{{ route('home')}}" method="get">
     <input type="text" name="s" placeholder="O que deseja buscar?" value="{{ request()->input('s') ?? '' }}">
     <button type="submit">Buscar</button>
 </form>
-@endsection
+@endsection --}}
 
 @section('main')
 <div class="container">
@@ -34,7 +34,7 @@
                             <p class="card-text">
                                 {{ Str::limit($post->content, 60, '...') }}
                             </p>
-                            <p>Autor: {{ $post->user->fullname }} - {{ $post->user->comments->count() }} comentários</p>
+                            <p>Autor: {{ $post->user->fullname }} - {{ $post->comments->count() }} comentários</p>
                             <a href="{{ route('post', $post->slug) }}" class="btn btn-primary">Leia mais</a>
                         </div>
                     </div>
