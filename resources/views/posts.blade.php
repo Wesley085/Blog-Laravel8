@@ -1,13 +1,13 @@
 @extends('master')
 
-@section('header-intro')
+{{-- @section('header-intro')
 
 <h2>Buscar post</h2>
 <form action="{{ route('home') }}" method="get">
     <input type="text" name="s" placeholder="O que deseja buscar?" value="{{ request()->input('s') ?? '' }}">
     <button type="submit">Buscar</button>
 </form>
-@endsection
+@endsection --}}
 
 @section('main')
 <div class="container">
