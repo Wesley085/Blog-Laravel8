@@ -2,7 +2,12 @@
 
 @section('header-intro')
     <div class="post-header p-6 rounded-lg shadow-md mb-6">
-        <img src="{{ $post->thumb }}" class="rounded-md mb-4 mx-auto" alt="Thumbnail do post" />
+        <img
+            src="{{ $post->thumb }}"
+            class="rounded-md mb-4 mx-auto w-full max-w-full sm:max-w-xs md:max-w-sm lg:max-w-md object-cover"
+            alt="Thumbnail do post"
+            style="max-width: 100%; height: auto;"
+        />
         <h2 class="post-title text-5xl font-semibold text-gray-800 mb-4 text-center">{{ $post->title }}</h2>
         <p class="post-author text-2xl text-gray-700 text-center">
             <i class="fas fa-user mr-2"></i> {{ $post->user->fullname }}
